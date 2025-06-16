@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Strategia rozwoju</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 831px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 831px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .phase-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #FFD700;
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .icon-circle {
+            background: rgba(255, 215, 0, 0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timeline {
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #FFD700;
+            position: absolute;
+            top: -4.5px;
+        }
+        .kpi-badge {
+            background-color: rgba(255, 215, 0, 0.2);
+            font-size: 0.85rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-6">
+<h1 class="title text-4xl mb-3">Strategia rozwoju</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-8">
+<p class="text-xl text-gray-300">
+                Rozwój aplikacji DressCode został zaplanowany w sposób etapowy - od testów MVP do pełnoskalowego wdrożenia, z równoczesnym skalowaniem funkcjonalności, partnerstw i monetyzacji.
+            </p>
+</div>
+<!-- Timeline -->
+<div class="z-10 relative mb-12 mt-2">
+<div class="timeline w-full relative">
+<div class="timeline-dot" style="left: 0%"></div>
+<div class="timeline-dot" style="left: 35%"></div>
+<div class="timeline-dot" style="left: 70%"></div>
+<div class="timeline-dot" style="left: 100%"></div>
+<div class="absolute -top-10 font-semibold" style="left: 0%">Start</div>
+<div class="absolute -top-10 font-semibold" style="left: 32%">12 miesięcy</div>
+<div class="absolute -top-10 font-semibold" style="left: 67%">24 miesiące</div>
+<div class="absolute -top-10 font-semibold" style="left: 93%">2-5 lat</div>
+</div>
+</div>
+<!-- Phase cards -->
+<div class="z-10 grid grid-cols-3 gap-6">
+<!-- Phase 1 -->
+<div class="phase-card p-5 rounded-lg flex flex-col h-full">
+<div class="flex items-center mb-4">
+<div class="icon-circle mr-4">
+<i class="fas fa-rocket text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl">Cele krótkoterminowe</h3>
+</div>
+<ul class="text-gray-300 mb-4 flex-grow">
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Zakończenie prac nad MVP aplikacji</span>
+</li>
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Zebranie pierwszych opinii użytkowników</span>
+</li>
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Współpraca z min. 2 platformami e-commerce</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Weryfikacja funkcji BNPL w BIK Open Api</span>
+</li>
+</ul>
+<div class="mt-auto">
+<div class="kpi-badge inline-block mr-2 mb-2">100-150 testerów</div>
+<div class="kpi-badge inline-block mb-2">≥75% pozytywnych ocen</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="phase-card p-5 rounded-lg flex flex-col h-full">
+<div class="flex items-center mb-4">
+<div class="icon-circle mr-4">
+<i class="fas fa-chart-line text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl">Cele średnioterminowe</h3>
+</div>
+<ul class="text-gray-300 mb-4 flex-grow">
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Oficjalne uruchomienie aplikacji (wersja publiczna)</span>
+</li>
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Rozszerzenie integracji z platformami e-commerce</span>
+</li>
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Wprowadzenie modelu freemium + funkcje premium</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Uruchomienie funkcji resellingu ubrań</span>
+</li>
+</ul>
+<div class="mt-auto">
+<div class="kpi-badge inline-block mr-2 mb-2">10 000 pobrań</div>
+<div class="kpi-badge inline-block mr-2 mb-2">min. 5 partnerstw</div>
+<div class="kpi-badge inline-block mb-2">≥100 transakcji/miesiąc</div>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="phase-card p-5 rounded-lg flex flex-col h-full">
+<div class="flex items-center mb-4">
+<div class="icon-circle mr-4">
+<i class="fas fa-globe text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl">Cele długoterminowe</h3>
+</div>
+<ul class="text-gray-300 mb-4 flex-grow">
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Ekspansja na rynki zagraniczne (Europa Środkowa i Zachodnia)</span>
+</li>
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Pełna integracja z BNPL i partnerami fintechowymi</span>
+</li>
+<li class="mb-2 flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>Stworzenie społeczności użytkowników</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+<span>DressCode jako hub modowo-finansowy</span>
+</li>
+</ul>
+<div class="mt-auto">
+<div class="kpi-badge inline-block mr-2 mb-2">min. 5 rynków</div>
+<div class="kpi-badge inline-block mr-2 mb-2">min. 3 języki</div>
+<div class="kpi-badge inline-block mb-2">50 tys. aktywnych użytkowników</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            8/15
+        </div>
+</div>
+
+</body></html>

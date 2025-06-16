@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Model monetyzacji</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 963px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 963px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .revenue-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .revenue-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .icon-circle {
+            background: rgba(255, 215, 0, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chart-container {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-8">
+<h1 class="title text-4xl mb-3">Model monetyzacji</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-6">
+<p class="text-xl text-gray-300">
+                DressCode wykorzystuje wieloźródłowy model przychodów, łącząc tradycyjne metody monetyzacji aplikacji z innowacyjnymi rozwiązaniami fintech.
+            </p>
+</div>
+<!-- Main content: Revenue streams -->
+<div class="z-10 grid grid-cols-2 gap-8 mt-2">
+<!-- Freemium -->
+<div class="revenue-card p-6 flex items-start">
+<div class="icon-circle mr-6 flex-shrink-0">
+<i class="fas fa-crown text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-xl mb-2">Model Freemium</h3>
+<p class="text-gray-300 mb-2">Podstawowe funkcje bez opłat, zaawansowane w modelu subskrypcyjnym.</p>
+<ul class="text-gray-300 text-sm list-disc pl-4">
+<li>Planowanie stylizacji na cały tydzień</li>
+<li>Analiza statystyk garderoby</li>
+<li>Przymierzanie AR</li>
+<li>Cel: min. 10% użytkowników w wersji premium</li>
+</ul>
+</div>
+</div>
+<!-- Sales commissions -->
+<div class="revenue-card p-6 flex items-start">
+<div class="icon-circle mr-6 flex-shrink-0">
+<i class="fas fa-percentage text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-xl mb-2">Prowizje od sprzedaży (CPA)</h3>
+<p class="text-gray-300 mb-2">Prowizje za zakupy dokonane za pośrednictwem aplikacji.</p>
+<ul class="text-gray-300 text-sm list-disc pl-4">
+<li>Afiliacja z platformami e-commerce</li>
+<li>Integracja z min. 5 aktywnymi partnerstwami</li>
+<li>Prowizja od transakcji dokonanych z polecenia</li>
+</ul>
+</div>
+</div>
+<!-- Product recommendations -->
+<div class="revenue-card p-6 flex items-start">
+<div class="icon-circle mr-6 flex-shrink-0">
+<i class="fas fa-tag text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-xl mb-2">Rekomendacje produktów</h3>
+<p class="text-gray-300 mb-2">Sugestie brakujących elementów do stylizacji i garderoby.</p>
+<ul class="text-gray-300 text-sm list-disc pl-4">
+<li>Personalizowane rekomendacje zakupowe</li>
+<li>Wyszukiwanie podobnych produktów</li>
+<li>Wsparcie dla polskich projektantów i marek</li>
+</ul>
+</div>
+</div>
+<!-- BNPL -->
+<div class="revenue-card p-6 flex items-start">
+<div class="icon-circle mr-6 flex-shrink-0">
+<i class="fas fa-credit-card text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-xl mb-2">Integracja BNPL</h3>
+<p class="text-gray-300 mb-2">Zakupy z odroczoną płatnością (Buy Now, Pay Later).</p>
+<ul class="text-gray-300 text-sm list-disc pl-4">
+<li>Współpraca z partnerami BNPL (Klarna, PayPo, Twisto)</li>
+<li>Weryfikacja modelu w ramach piaskownicy BIK</li>
+<li>Udział w prowizji od transakcji odroczonych</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom section with image -->
+<div class="z-10 flex items-center mt-6">
+<div class="w-1/4">
+<img alt="Zakupy z odroczoną płatnością" class="rounded-lg shadow-lg" src="https://picture-search.skywork.ai/aippt/image/sheet/95db527de6f009c8648f39e45efad764.jpg" style="max-height: 120px; object-fit: cover;"/>
+</div>
+<div class="w-3/4 pl-8">
+<p class="text-lg font-light text-gray-300">
+<i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                    Wieloźródłowy model przychodów minimalizuje ryzyko biznesowe i zapewnia stabilny wzrost wraz z powiększaniem się bazy użytkowników. Docelowo DressCode ma stać się hubem modowo-finansowym łączącym wszystkie aspekty zarządzania garderobą i zakupami.
+                </p>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            10/15
+        </div>
+</div>
+
+</body></html>

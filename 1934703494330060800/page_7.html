@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analiza konkurencji</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 943px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 943px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .comp-table th {
+            font-weight: 500;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .comp-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .feature-yes {
+            color: #4ADE80;
+        }
+        .feature-no {
+            color: #FB7185;
+        }
+        .feature-partial {
+            color: #FBBF24;
+        }
+        .company-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        .dresscode-col {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-8">
+<h1 class="title text-4xl mb-3">Analiza konkurencji</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-6">
+<p class="text-xl text-gray-300">
+                Na rynku nie ma jednej aplikacji, która łączyłaby wszystkie funkcje DressCode. Istniejące rozwiązania oferują jedynie wybrane elementy naszego ekosystemu:
+            </p>
+</div>
+<!-- Comparison Table -->
+<div class="z-10 overflow-hidden">
+<table class="comp-table w-full text-sm">
+<thead>
+<tr class="bg-opacity-20 bg-white">
+<th class="w-1/5 text-left pl-4">Funkcjonalność</th>
+<th class="w-1/5">
+<div class="company-logo bg-blue-500">W</div>
+                            Whering (UK)
+                        </th>
+<th class="w-1/5">
+<div class="company-logo bg-green-500">A</div>
+                            Acloset (Korea)
+                        </th>
+<th class="w-1/5">
+<div class="company-logo bg-purple-500">I</div>
+                            Indyx (USA)
+                        </th>
+<th class="w-1/5 dresscode-col">
+<div class="company-logo bg-yellow-400">D</div>
+                            DressCode
+                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-left pl-4">Cyfrowa szafa</td>
+<td><i class="fas fa-check feature-yes"></i></td>
+<td><i class="fas fa-check feature-yes"></i></td>
+<td><i class="fas fa-check feature-yes"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+<tr>
+<td class="text-left pl-4">Stylizacje AI</td>
+<td><i class="fas fa-minus feature-partial"></i></td>
+<td><i class="fas fa-check feature-yes"></i></td>
+<td><i class="fas fa-minus feature-partial"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+<tr>
+<td class="text-left pl-4">Wirtualny stylista (chatbot AI)</td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+<tr>
+<td class="text-left pl-4">Integracja z e-commerce</td>
+<td><i class="fas fa-check feature-yes"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-minus feature-partial"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+<tr>
+<td class="text-left pl-4">Płatność odroczona (BNPL)</td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+<tr>
+<td class="text-left pl-4">Planowanie na podróż</td>
+<td><i class="fas fa-minus feature-partial"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+<tr>
+<td class="text-left pl-4">Reselling ubrań</td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td><i class="fas fa-minus feature-partial"></i></td>
+<td><i class="fas fa-times feature-no"></i></td>
+<td class="dresscode-col"><i class="fas fa-check feature-yes"></i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Key insights -->
+<div class="z-10 mt-6 grid grid-cols-2 gap-6">
+<div class="bg-opacity-10 bg-white rounded-lg p-4">
+<h3 class="font-semibold text-yellow-400 mb-2">Modele biznesowe konkurencji</h3>
+<ul class="text-sm text-gray-300 space-y-1">
+<li><i class="fas fa-angle-right mr-2 text-yellow-400"></i>Whering: prowizje od sprzedaży (model afiliacyjny)</li>
+<li><i class="fas fa-angle-right mr-2 text-yellow-400"></i>Acloset: freemium (limit 100 ubrań w wersji darmowej)</li>
+<li><i class="fas fa-angle-right mr-2 text-yellow-400"></i>Indyx: abonament za dostęp do stylisty ($25+/miesiąc)</li>
+</ul>
+</div>
+<div class="bg-opacity-10 bg-white rounded-lg p-4">
+<h3 class="font-semibold text-yellow-400 mb-2">Przewaga DressCode</h3>
+<ul class="text-sm text-gray-300 space-y-1">
+<li><i class="fas fa-angle-right mr-2 text-yellow-400"></i>Kompleksowość: jedyna aplikacja łącząca wszystkie funkcje</li>
+<li><i class="fas fa-angle-right mr-2 text-yellow-400"></i>Unikalna synergia: moda + AI + fintech</li>
+<li><i class="fas fa-angle-right mr-2 text-yellow-400"></i>Zaawansowana personalizacja i kontekstowość rekomendacji</li>
+</ul>
+</div>
+</div>
+<!-- Feature completeness visualization -->
+<div class="z-10 mt-4">
+<div class="w-full h-20" id="feature-chart"></div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            7/15
+        </div>
+</div>
+<script>
+        // Simple D3.js horizontal bar chart showing feature completeness
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = [
+                {name: "DressCode", value: 100, color: "#FFD700"},
+                {name: "Indyx", value: 45, color: "#9F7AEA"},
+                {name: "Acloset", value: 50, color: "#4ADE80"},
+                {name: "Whering", value: 55, color: "#3B82F6"}
+            ];
+            
+            const width = document.getElementById('feature-chart').clientWidth;
+            const height = 80;
+            const margin = {top: 20, right: 30, bottom: 25, left: 120};
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+            
+            const svg = d3.select('#feature-chart')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+                
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+                
+            // Scales
+            const xScale = d3.scaleLinear()
+                .domain([0, 100])
+                .range([0, innerWidth]);
+                
+            const yScale = d3.scaleBand()
+                .domain(data.map(d => d.name))
+                .range([0, innerHeight])
+                .padding(0.2);
+                
+            // Bars
+            g.selectAll('.bar')
+                .data(data)
+                .enter()
+                .append('rect')
+                .attr('class', 'bar')
+                .attr('y', d => yScale(d.name))
+                .attr('x', 0)
+                .attr('height', yScale.bandwidth())
+                .attr('width', d => xScale(d.value))
+                .attr('fill', d => d.color)
+                .attr('opacity', 0.8);
+                
+            // Labels
+            g.selectAll('.label')
+                .data(data)
+                .enter()
+                .append('text')
+                .attr('class', 'label')
+                .attr('y', d => yScale(d.name) + yScale.bandwidth() / 2)
+                .attr('x', d => xScale(d.value) + 5)
+                .attr('dy', '0.35em')
+                .attr('fill', 'white')
+                .attr('font-size', 10)
+                .text(d => d.value + '%');
+                
+            // Y Axis (app names)
+            g.selectAll('.app-name')
+                .data(data)
+                .enter()
+                .append('text')
+                .attr('class', 'app-name')
+                .attr('y', d => yScale(d.name) + yScale.bandwidth() / 2)
+                .attr('x', -5)
+                .attr('text-anchor', 'end')
+                .attr('dy', '0.35em')
+                .attr('fill', 'white')
+                .attr('font-size', 11)
+                .text(d => d.name);
+                
+            // X Axis title
+            svg.append('text')
+                .attr('x', margin.left + innerWidth / 2)
+                .attr('y', height - 5)
+                .attr('text-anchor', 'middle')
+                .attr('fill', 'white')
+                .attr('font-size', 10)
+                .attr('opacity', 0.7)
+                .text('Kompletność funkcji (%)');
+        });
+    </script>
+
+</body></html>

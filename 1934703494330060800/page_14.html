@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analiza SWOT</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1328px; height: 768px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 768px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .swot-card {
+            border-radius: 8px;
+            height: 100%;
+        }
+        .swot-header {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 10px 0;
+        }
+        .swot-content {
+            padding: 15px;
+            height: calc(100% - 40px);
+        }
+        .swot-item {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .swot-icon {
+            margin-right: 8px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-12">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-6">
+<h1 class="title text-4xl mb-3">Analiza SWOT</h1>
+<div class="accent-line"></div>
+</div>
+<!-- SWOT Grid -->
+<div class="z-10 grid grid-cols-2 grid-rows-2 gap-6 flex-grow">
+<!-- Strengths -->
+<div class="swot-card bg-opacity-10 bg-green-500 border border-green-400">
+<div class="swot-header bg-green-600 text-center">
+<h3 class="font-bold text-lg flex items-center justify-center">
+<i class="fas fa-star text-yellow-400 mr-2"></i>
+                        Mocne strony
+                    </h3>
+</div>
+<div class="swot-content">
+<div class="swot-item">
+<i class="swot-icon fas fa-check-circle text-green-400"></i>
+<span>Innowacyjna koncepcja łącząca modę, fintech i AI</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-check-circle text-green-400"></i>
+<span>Wysoka wartość dodana dla użytkownika (personalizacja, organizacja garderoby)</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-check-circle text-green-400"></i>
+<span>Współpraca z renomowanymi partnerami (np. BIK)</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-check-circle text-green-400"></i>
+<span>Wpisuje się w rosnące trendy e-commerce i świadomych zakupów</span>
+</div>
+</div>
+</div>
+<!-- Weaknesses -->
+<div class="swot-card bg-opacity-10 bg-red-500 border border-red-400">
+<div class="swot-header bg-red-600 text-center">
+<h3 class="font-bold text-lg flex items-center justify-center">
+<i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i>
+                        Słabe strony
+                    </h3>
+</div>
+<div class="swot-content">
+<div class="swot-item">
+<i class="swot-icon fas fa-minus-circle text-red-400"></i>
+<span>Wysokie koszty rozwoju technologii i marketingu</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-minus-circle text-red-400"></i>
+<span>Wymagana duża baza danych do skutecznego działania algorytmów</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-minus-circle text-red-400"></i>
+<span>Brak gotowej społeczności użytkowników na starcie</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-minus-circle text-red-400"></i>
+<span>Uzależnienie od współpracy z zewnętrznymi dostawcami (BNPL, marketplace&#39;y)</span>
+</div>
+</div>
+</div>
+<!-- Opportunities -->
+<div class="swot-card bg-opacity-10 bg-blue-500 border border-blue-400">
+<div class="swot-header bg-blue-600 text-center">
+<h3 class="font-bold text-lg flex items-center justify-center">
+<i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                        Szanse
+                    </h3>
+</div>
+<div class="swot-content">
+<div class="swot-item">
+<i class="swot-icon fas fa-arrow-trend-up text-blue-400"></i>
+<span>Rosnące zainteresowanie AI w sektorze modowym</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-arrow-trend-up text-blue-400"></i>
+<span>Rozwój rynku BNPL i digital fashion w Europie</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-arrow-trend-up text-blue-400"></i>
+<span>Zwiększone wsparcie dla startupów technologicznych</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-arrow-trend-up text-blue-400"></i>
+<span>Ekspansja funkcji resellingu odzieży - moda na zrównoważony rozwój</span>
+</div>
+</div>
+</div>
+<!-- Threats -->
+<div class="swot-card bg-opacity-10 bg-yellow-500 border border-yellow-400">
+<div class="swot-header bg-yellow-600 text-center">
+<h3 class="font-bold text-lg flex items-center justify-center">
+<i class="fas fa-shield-alt text-yellow-400 mr-2"></i>
+                        Zagrożenia
+                    </h3>
+</div>
+<div class="swot-content">
+<div class="swot-item">
+<i class="swot-icon fas fa-warning text-yellow-400"></i>
+<span>Duża konkurencja na rynku aplikacji modowych i e-commerce</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-warning text-yellow-400"></i>
+<span>Ryzyko szybkiej zmiany preferencji konsumentów</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-warning text-yellow-400"></i>
+<span>Nowe regulacje mogą ograniczyć możliwości korzystania z danych</span>
+</div>
+<div class="swot-item">
+<i class="swot-icon fas fa-warning text-yellow-400"></i>
+<span>Rosnące koszty pozyskiwania użytkowników i walki o uwagę klienta</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            14/15
+        </div>
+</div>
+
+</body></html>

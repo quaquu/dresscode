@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Szansa inwestycyjna</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 871px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 871px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .benefit-item {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .benefit-item:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .icon-circle {
+            background: rgba(255, 215, 0, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cta-button {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            color: #1A2B3C;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        }
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #FFD700;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-8">
+<h1 class="title text-4xl mb-3">Szansa inwestycyjna</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-8">
+<p class="text-xl text-gray-200">
+                Zapraszamy do udziału w przełomowym projekcie o wysokim potencjale wzrostu, który zrewolucjonizuje 
+                punkt przecięcia mody, technologii i finansów.
+            </p>
+</div>
+<!-- Key benefits section -->
+<div class="z-10 grid grid-cols-2 gap-6 mb-8">
+<!-- Benefit 1 -->
+<div class="benefit-item p-5 flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-chart-line text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-1">Szybki zwrot z inwestycji</h3>
+<p class="text-gray-300">Osiągnięcie progu rentowności w drugim roku działalności, przy marży zysku 65-78% w scenariuszu realistycznym.</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="benefit-item p-5 flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-lightbulb text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-1">Innowacyjna synergia</h3>
+<p class="text-gray-300">Unikalne połączenie trzech światów: mody, sztucznej inteligencji i rozwiązań fintech w jednej aplikacji.</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="benefit-item p-5 flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-users text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-1">Rosnący rynek docelowy</h3>
+<p class="text-gray-300">Odpowiedź na realną potrzebę milionów użytkowników zmagających się z zarządzaniem garderobą i zakupami.</p>
+</div>
+</div>
+<!-- Benefit 4 -->
+<div class="benefit-item p-5 flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-handshake text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-1">Strategiczne partnerstwa</h3>
+<p class="text-gray-300">Współpraca z BIK i potencjał integracji z platformami e-commerce oraz dostawcami usług BNPL.</p>
+</div>
+</div>
+</div>
+<!-- Call to action -->
+<div class="z-10 flex flex-col items-center mt-2 mb-8">
+<button class="cta-button font-bold py-3 px-10 rounded-full text-xl shadow-lg">
+                Dołącz do rewolucji DressCode
+            </button>
+<p class="text-gray-300 mt-3 text-center">
+                Zostań inwestorem już dziś i weź udział w budowaniu przyszłości fashion-tech
+            </p>
+</div>
+<!-- Contact information -->
+<div class="z-10 contact-box p-4 rounded-r-lg mt-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="fas fa-envelope text-yellow-400 mr-3"></i>
+<span>kontakt@dresscode.pl</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-phone text-yellow-400 mr-3"></i>
+<span>+48 517 549 397</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-globe text-yellow-400 mr-3"></i>
+<span>www.dresscode.pl</span>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            15/15
+        </div>
+</div>
+
+</body></html>

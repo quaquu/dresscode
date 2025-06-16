@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Główne funkcje aplikacji</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 937px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 937px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            height: 100%;
+        }
+        .feature-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .icon-box {
+            background: rgba(255, 215, 0, 0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-8">
+<h1 class="title text-4xl mb-3">Główne funkcje aplikacji</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-6">
+<p class="text-xl text-gray-300">
+                DressCode oferuje kompleksowe rozwiązanie łączące organizację garderoby, sztuczną inteligencję i fintech w jednej aplikacji.
+            </p>
+</div>
+<!-- Features grid -->
+<div class="z-10 grid grid-cols-3 gap-6 mt-2">
+<!-- Feature 1 -->
+<div class="feature-card p-6">
+<div class="icon-box">
+<i class="fas fa-tshirt text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl mb-2">Cyfrowa szafa</h3>
+<p class="text-gray-300">
+                    Dodawanie zdjęć ubrań i akcesoriów, tworząc uporządkowaną, wirtualną garderobę z automatyczną kategoryzacją.
+                </p>
+</div>
+<!-- Feature 2 -->
+<div class="feature-card p-6">
+<div class="icon-box">
+<i class="fas fa-magic text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl mb-2">Planowanie stylizacji AI</h3>
+<p class="text-gray-300">
+                    Generowanie gotowych outfitów na podstawie okazji, pogody, lokalizacji, stylu użytkownika, a nawet formy transportu.
+                </p>
+</div>
+<!-- Feature 3 -->
+<div class="feature-card p-6">
+<div class="icon-box">
+<i class="fas fa-comments text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl mb-2">Wirtualny stylista</h3>
+<p class="text-gray-300">
+                    Czatbot AI umożliwiający rozmowę, np.: &#34;Jakie buty pasują do tej sukienki?&#34; lub &#34;Jak ubrać się na elegancką kolację?&#34;
+                </p>
+</div>
+<!-- Feature 4 -->
+<div class="feature-card p-6">
+<div class="icon-box">
+<i class="fas fa-search text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl mb-2">Wyszukiwanie produktów</h3>
+<p class="text-gray-300">
+                    Na podstawie zdjęcia ubrania, użytkownik może znaleźć podobne produkty w zintegrowanych sklepach internetowych.
+                </p>
+</div>
+<!-- Feature 5 -->
+<div class="feature-card p-6">
+<div class="icon-box">
+<i class="fas fa-credit-card text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl mb-2">Zakupy z odroczoną płatnością</h3>
+<p class="text-gray-300">
+                    System podpowiada, czego brakuje do danej stylizacji i umożliwia zakup z odroczoną płatnością (BNPL).
+                </p>
+</div>
+<!-- Feature 6 -->
+<div class="feature-card p-6">
+<div class="icon-box">
+<i class="fas fa-exchange-alt text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-xl mb-2">Reselling ubrań</h3>
+<p class="text-gray-300">
+                    Sprzedaż niepotrzebnych ubrań bezpośrednio w aplikacji. System łączy sprzedającego z kupującym, obsługując płatność i wysyłkę.
+                </p>
+</div>
+</div>
+<!-- Additional features note -->
+<div class="z-10 mt-auto pt-4">
+<p class="text-sm text-gray-400 italic">
+<i class="fas fa-info-circle mr-2"></i>
+                Dodatkowe funkcje: walizka na wyjazd, ankieta wśród znajomych, inspiracje i porady modowe.
+            </p>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            5/15
+        </div>
+</div>
+
+</body></html>

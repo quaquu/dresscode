@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Współpraca z BIK</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 867px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 867px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .benefit-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #FFD700;
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .scenario-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        .icon-circle {
+            background: rgba(255, 215, 0, 0.15);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-6">
+<h1 class="title text-4xl mb-3">Współpraca z BIK</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-6">
+<p class="text-xl text-gray-300">
+                W ramach prac nad aplikacją DressCode zespół uczestniczy w inicjatywie <span class="font-semibold text-white">BIK EduSprint</span>, 
+                która umożliwia testowanie koncepcji biznesowej z wykorzystaniem środowiska testowego BIK Open API.
+            </p>
+</div>
+<!-- Main content - two columns -->
+<div class="z-10 grid grid-cols-2 gap-8 mt-4">
+<!-- Left column - Test scenarios -->
+<div>
+<h2 class="text-2xl font-semibold mb-4 flex items-center">
+<i class="fas fa-vial text-yellow-400 mr-3"></i>
+                    Scenariusze testowe
+                </h2>
+<div class="space-y-4">
+<div class="scenario-box p-4">
+<div class="flex items-start">
+<div class="icon-circle mr-4 flex-shrink-0">
+<i class="fas fa-user-check text-yellow-400"></i>
+</div>
+<div>
+<h3 class="font-medium text-lg">Wiarygodność sprzedawcy</h3>
+<p class="text-gray-300 text-sm">Testowanie mechanizmu budowania zaufania pomiędzy użytkownikami w funkcji odsprzedaży ubrań (C2C).</p>
+</div>
+</div>
+</div>
+<div class="scenario-box p-4">
+<div class="flex items-start">
+<div class="icon-circle mr-4 flex-shrink-0">
+<i class="fas fa-credit-card text-yellow-400"></i>
+</div>
+<div>
+<h3 class="font-medium text-lg">Walidacja BNPL</h3>
+<p class="text-gray-300 text-sm">Analiza potencjału funkcji płatności odroczonej w kontekście zachowań użytkowników i konwersji.</p>
+</div>
+</div>
+</div>
+<div class="scenario-box p-4">
+<div class="flex items-start">
+<div class="icon-circle mr-4 flex-shrink-0">
+<i class="fas fa-robot text-yellow-400"></i>
+</div>
+<div>
+<h3 class="font-medium text-lg">Rozwój czatbota AI</h3>
+<p class="text-gray-300 text-sm">Symulowanie scenariuszy, w których czatbot stylistyczny korzysta z danych kontekstowych użytkownika.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column - Benefits -->
+<div>
+<h2 class="text-2xl font-semibold mb-4 flex items-center">
+<i class="fas fa-star text-yellow-400 mr-3"></i>
+                    Korzyści współpracy
+                </h2>
+<div class="space-y-3">
+<div class="benefit-card p-3 rounded-lg">
+<p class="text-gray-300"><i class="fas fa-shield-alt text-yellow-400 mr-2"></i> Bezpieczne testowanie w kontrolowanym środowisku z dostępem do realnych struktur danych</p>
+</div>
+<div class="benefit-card p-3 rounded-lg">
+<p class="text-gray-300"><i class="fas fa-users text-yellow-400 mr-2"></i> Wyciągnięcie wniosków o UX, zachowaniach użytkowników i oczekiwaniach funkcjonalnych</p>
+</div>
+<div class="benefit-card p-3 rounded-lg">
+<p class="text-gray-300"><i class="fas fa-handshake text-yellow-400 mr-2"></i> Budowanie relacji z BIK jako potencjalnym partnerem technologicznym</p>
+</div>
+<div class="benefit-card p-3 rounded-lg">
+<p class="text-gray-300"><i class="fas fa-plug text-yellow-400 mr-2"></i> Lepsze przygotowanie aplikacji do integracji z partnerami BNPL i sektorem finansowym</p>
+</div>
+<div class="benefit-card p-3 rounded-lg">
+<p class="text-gray-300"><i class="fas fa-chart-line text-yellow-400 mr-2"></i> Wykazanie dojrzałości projektu podczas rozmów z inwestorami</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom quote -->
+<div class="z-10 mt-auto pt-5">
+<p class="text-base italic text-gray-300 border-l-4 border-yellow-400 pl-4">
+                &#34;;Dostęp do środowiska testowego BIK Open API stanowi dla zespołu DressCode cenne wsparcie w zakresie walidacji funkcjonalności, testowania prototypów i zrozumienia potencjału integracji z sektorem finansowym.&#34;
+            </p>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            13/15
+        </div>
+</div>
+
+</body></html>

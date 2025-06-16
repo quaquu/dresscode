@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nasze rozwiązanie: DressCode</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 831px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 831px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .feature-box {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .feature-box:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .icon-container {
+            background: rgba(255, 215, 0, 0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-6">
+<h1 class="title text-4xl mb-3">Nasze rozwiązanie: DressCode</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-6">
+<p class="text-xl text-gray-300">
+                Innowacyjna aplikacja modowo-fintechowa, która łączy cyfrową szafę, stylizacje generowane przez AI, rekomendacje e-commerce oraz możliwość zakupu ubrań z odroczoną płatnością.
+            </p>
+</div>
+<!-- Content section -->
+<div class="z-10 flex flex-col gap-6 h-full">
+<!-- Features -->
+<div class="grid grid-cols-2 gap-6">
+<!-- Feature 1 -->
+<div class="feature-box p-4 flex items-center">
+<div class="icon-container mr-4 flex-shrink-0">
+<i class="fas fa-tshirt text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg">Cyfrowa szafa</h3>
+<p class="text-gray-300">Dodawaj zdjęcia swoich ubrań i akcesoriów, tworząc uporządkowaną, wirtualną garderobę.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="feature-box p-4 flex items-center">
+<div class="icon-container mr-4 flex-shrink-0">
+<i class="fas fa-magic text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg">Planowanie stylizacji (AI)</h3>
+<p class="text-gray-300">Automatyczne generowanie gotowych outfitów na podstawie okazji, pogody i stylu użytkownika.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="feature-box p-4 flex items-center">
+<div class="icon-container mr-4 flex-shrink-0">
+<i class="fas fa-comments-dollar text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg">Zakupy z odroczoną płatnością</h3>
+<p class="text-gray-300">System podpowiada, czego brakuje do danej stylizacji i umożliwia zakup z opcją BNPL.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="feature-box p-4 flex items-center">
+<div class="icon-container mr-4 flex-shrink-0">
+<i class="fas fa-robot text-yellow-400 text-2xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg">Wirtualny stylista (czatbot AI)</h3>
+<p class="text-gray-300">Możliwość prowadzenia rozmowy o stylizacjach i uzyskiwania porad modowych.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            3/15
+        </div>
+</div>
+
+</body></html>

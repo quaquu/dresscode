@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DressCode Presentation</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1280px; min-height: 720px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+        }
+        .subtitle {
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 4px;
+            width: 100px;
+            border-radius: 2px;
+        }
+        .image-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 45%;
+            
+            clip-path: polygon(100px 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(26,43,60,0.9) 0%, rgba(26,43,60,0.3) 100%);
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col justify-between">
+<div class="overlay-pattern"></div>
+<!-- Image section -->
+<div class="image-container">
+<img alt="Kobieta organizująca garderobę" class="h-full object-cover" src="https://picture-search.skywork.ai/aippt/image/sheet/4dfdef51ee2d8a3e58d541c362b98ef4.jpg"/>
+<div class="image-overlay"></div>
+</div>
+<!-- Content section -->
+<div class="z-10 flex flex-col h-full">
+<!-- Top section - empty space -->
+<div class="h-1/6"></div>
+<!-- Middle section - main content -->
+<div class="pl-24 pr-64 flex flex-col">
+<div class="mb-2">
+<span class="bg-white text-gray-800 px-3 py-1 text-sm font-medium rounded">Prezentacja Inwestycyjna</span>
+</div>
+<h1 class="title text-5xl mb-6">DressCode</h1>
+<div class="accent-line mb-6"></div>
+<h2 class="subtitle text-3xl mb-4">Rewolucja w modzie i finansach poprzez AI</h2>
+<p class="text-xl font-light text-gray-300 mt-6 mb-8">
+                    Innowacyjna aplikacja łącząca cyfrową szafę, stylizacje AI, <br/>
+                    rekomendacje zakupowe i płatności odroczone
+                </p>
+</div>
+<!-- Bottom section - team info -->
+<div class="mt-auto pb-12 pl-24 flex items-center">
+<div class="flex flex-col">
+<div class="flex items-center mb-2">
+<i class="fas fa-users mr-3 text-yellow-400"></i>
+<span class="text-gray-300">Zespół: H. Kondracki, A. Banach, M. Gazdecki, L. Nepelski, A. Żurek</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-calendar-alt mr-3 text-yellow-400"></i>
+<span class="text-gray-300">2025</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

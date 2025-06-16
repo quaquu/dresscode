@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kluczowe wyróżniki</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1336px; height: 919px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 919px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+        .icon-container {
+            background: rgba(255, 215, 0, 0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(232,165,165,0.1) 100%);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-14">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-6">
+<h1 class="title text-4xl mb-3">Kluczowe wyróżniki</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-8">
+<p class="text-xl text-gray-300">
+                DressCode wyróżnia się na tle konkurencji dzięki unikatowemu połączeniu funkcji i wartości,
+                które tworzą kompleksowe rozwiązanie dla nowoczesnych konsumentów.
+            </p>
+</div>
+<!-- Features Grid -->
+<div class="z-10 grid grid-cols-3 gap-6 mb-8">
+<!-- Feature 1 -->
+<div class="feature-card p-6 flex flex-col items-center text-center">
+<div class="icon-container">
+<i class="fas fa-sync-alt text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Synergia trzech światów</h3>
+<p class="text-gray-300 text-sm">
+                    Unikalne połączenie mody, sztucznej inteligencji i technologii finansowych w jednym ekosystemie.
+                </p>
+</div>
+<!-- Feature 2 -->
+<div class="feature-card p-6 flex flex-col items-center text-center">
+<div class="icon-container">
+<i class="fas fa-cubes text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Kompleksowość</h3>
+<p class="text-gray-300 text-sm">
+                    Żadna obecna aplikacja nie łączy tylu funkcji w jednym narzędziu - od planowania stylizacji po płatności odroczone.
+                </p>
+</div>
+<!-- Feature 3 -->
+<div class="feature-card p-6 flex flex-col items-center text-center">
+<div class="icon-container">
+<i class="fas fa-user-cog text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Personalizacja</h3>
+<p class="text-gray-300 text-sm">
+                    System uczy się stylu użytkownika i dopasowuje propozycje, zapewniając trafne rekomendacje.
+                </p>
+</div>
+<!-- Feature 4 -->
+<div class="feature-card p-6 flex flex-col items-center text-center">
+<div class="icon-container">
+<i class="fas fa-leaf text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Ekologiczne podejście</h3>
+<p class="text-gray-300 text-sm">
+                    Promowanie rozsądnego konsumpcjonizmu, ograniczanie nadmiaru i wspieranie odsprzedaży ubrań.
+                </p>
+</div>
+<!-- Feature 5 -->
+<div class="feature-card p-6 flex flex-col items-center text-center">
+<div class="icon-container">
+<i class="fas fa-store text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Wsparcie lokalnych marek</h3>
+<p class="text-gray-300 text-sm">
+                    Rekomendacje mogą obejmować produkty od polskich projektantów, wspierając lokalny rynek mody.
+                </p>
+</div>
+<!-- Feature 6 -->
+<div class="feature-card p-6 flex flex-col items-center text-center">
+<div class="icon-container">
+<i class="fas fa-rocket text-yellow-400 text-2xl"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Przyszłościowe podejście</h3>
+<p class="text-gray-300 text-sm">
+                    Potencjał rozwoju funkcji społecznościowych, współdzielenia ubrań, integracji z AR czy planowania zakupów.
+                </p>
+</div>
+</div>
+<!-- Highlight box -->
+<div class="z-10 highlight-box p-5 mt-auto">
+<div class="flex items-center">
+<i class="fas fa-lightbulb text-yellow-400 text-xl mr-4"></i>
+<p class="text-gray-200">
+<span class="font-semibold">Unikatowa propozycja wartości:</span> 
+                    DressCode to pierwsza aplikacja łącząca kompleksowe rozwiązania modowe z opcją zakupów na odroczony termin płatności.
+                </p>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            6/15
+        </div>
+</div>
+
+</body></html>

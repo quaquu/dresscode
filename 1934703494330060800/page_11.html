@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projekcje finansowe</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1336px; height: 835px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 835px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .highlight-box {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #FFD700;
+        }
+        .chart-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        .turning-point-label {
+            font-weight: 600;
+            font-size: 14px;
+            fill: #E8A5A5;
+            text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-14">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-4">
+<h1 class="title text-4xl mb-3">Projekcje finansowe</h1>
+<div class="accent-line"></div>
+<p class="text-gray-300 mt-3">Przewidywany rozwój finansowy na najbliższe 5 lat (2025-2030)</p>
+</div>
+<!-- Chart section -->
+<div class="z-10 chart-container p-4 flex-grow h-96" id="chart-area">
+<div class="flex justify-center items-center h-full" id="chart"></div>
+</div>
+<!-- Key highlights -->
+<div class="z-10 grid grid-cols-3 gap-6 mt-4">
+<!-- ROI highlight -->
+<div class="highlight-box p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-chart-line text-yellow-400 mr-3"></i>
+<h3 class="font-semibold text-lg">Zwrot z inwestycji</h3>
+</div>
+<p class="text-gray-300">Zwrot z inwestycji nastąpi w drugim roku pełnej działalności spółki (wariant realistyczny).</p>
+</div>
+<!-- Realistic scenario -->
+<div class="highlight-box p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-balance-scale text-yellow-400 mr-3"></i>
+<h3 class="font-semibold text-lg">Wariant realistyczny</h3>
+</div>
+<p class="text-gray-300">Rentowność od 65% do 69% w latach 2027-2030. Zysk netto w 2030: 10,2 mln PLN.</p>
+</div>
+<!-- Optimistic scenario -->
+<div class="highlight-box p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-rocket text-yellow-400 mr-3"></i>
+<h3 class="font-semibold text-lg">Wariant optymistyczny</h3>
+</div>
+<p class="text-gray-300">Rentowność od 74% do 79% w latach 2027-2030. Zysk netto w 2030: 25,9 mln PLN.</p>
+</div>
+</div>
+<!-- Legend -->
+<div class="z-10 flex justify-center mt-4">
+<div class="flex items-center">
+<div class="legend-item">
+<div class="legend-color" style="background-color: #4F94CD;"></div>
+<span class="text-sm">Wariant realistyczny</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #FFD700;"></div>
+<span class="text-sm">Wariant optymistyczny</span>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            11/15
+        </div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data from the document
+            const financialData = [
+                { year: "2025", realistic: -956200, optimistic: -756200, realisticProfit: 0, optimisticProfit: 0 },
+                { year: "2026", realistic: -126986, optimistic: 168351.8, realisticProfit: 0, optimisticProfit: 13.67 },
+                { year: "2027", realistic: 2811804, optimistic: 4558621, realisticProfit: 66.32, optimisticProfit: 74.01 },
+                { year: "2028", realistic: 5036826, optimistic: 12177633, realisticProfit: 65.93, optimisticProfit: 78.63 },
+                { year: "2029", realistic: 7131758, optimistic: 18353806, realisticProfit: 65.07, optimisticProfit: 73.97 },
+                { year: "2030", realistic: 10195988, optimistic: 25856302, realisticProfit: 68.86, optimisticProfit: 75.73 }
+            ];
+            
+            // Set dimensions and margins - increased height
+            const margin = {top: 40, right: 80, bottom: 60, left: 80};
+            const width = 950 - margin.left - margin.right;
+            const height = 380 - margin.top - margin.bottom; // Increased height
+            
+            // Create SVG
+            const svg = d3.select("#chart")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+                
+            // X scale - years
+            const x = d3.scaleBand()
+                .domain(financialData.map(d => d.year))
+                .range([0, width])
+                .padding(0.2);
+                
+            // Y scale - profit values
+            const yProfit = d3.scaleLinear()
+                .domain([d3.min(financialData, d => Math.min(d.realistic, d.optimistic)) * 1.1, 
+                         d3.max(financialData, d => Math.max(d.realistic, d.optimistic)) * 1.1])
+                .range([height, 0]);
+                
+            // Add X axis
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .attr("fill", "#e2e8f0")
+                .style("font-size", "12px");
+                
+            // Add Y axis
+            svg.append("g")
+                .call(d3.axisLeft(yProfit)
+                    .tickFormat(d => {
+                        if (d >= 1000000) return (d / 1000000).toFixed(1) + "M";
+                        else if (d >= 1000) return (d / 1000).toFixed(0) + "k";
+                        else return d;
+                    }))
+                .selectAll("text")
+                .attr("fill", "#e2e8f0")
+                .style("font-size", "12px");
+                
+            // Add Y axis label
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -margin.left + 20)
+                .attr("x", -height / 2)
+                .attr("fill", "#e2e8f0")
+                .attr("text-anchor", "middle")
+                .style("font-size", "14px")
+                .text("Zysk netto (PLN)");
+                
+            // Add X axis label
+            svg.append("text")
+                .attr("y", height + margin.bottom - 20)
+                .attr("x", width / 2)
+                .attr("fill", "#e2e8f0")
+                .attr("text-anchor", "middle")
+                .style("font-size", "14px")
+                .text("Rok");
+                
+            // Create a line generator for realistic scenario
+            const lineRealistic = d3.line()
+                .x(d => x(d.year) + x.bandwidth()/2)
+                .y(d => yProfit(d.realistic));
+                
+            // Create a line generator for optimistic scenario
+            const lineOptimistic = d3.line()
+                .x(d => x(d.year) + x.bandwidth()/2)
+                .y(d => yProfit(d.optimistic));
+                
+            // Add the realistic line path
+            svg.append("path")
+                .datum(financialData)
+                .attr("fill", "none")
+                .attr("stroke", "#4F94CD")
+                .attr("stroke-width", 3)
+                .attr("d", lineRealistic);
+                
+            // Add the optimistic line path
+            svg.append("path")
+                .datum(financialData)
+                .attr("fill", "none")
+                .attr("stroke", "#FFD700")
+                .attr("stroke-width", 3)
+                .attr("d", lineOptimistic);
+                
+            // Add circles for realistic data points
+            svg.selectAll(".dot-realistic")
+                .data(financialData)
+                .enter().append("circle")
+                .attr("class", "dot-realistic")
+                .attr("cx", d => x(d.year) + x.bandwidth()/2)
+                .attr("cy", d => yProfit(d.realistic))
+                .attr("r", 5)
+                .attr("fill", "#4F94CD");
+                
+            // Add circles for optimistic data points
+            svg.selectAll(".dot-optimistic")
+                .data(financialData)
+                .enter().append("circle")
+                .attr("class", "dot-optimistic")
+                .attr("cx", d => x(d.year) + x.bandwidth()/2)
+                .attr("cy", d => yProfit(d.optimistic))
+                .attr("r", 5)
+                .attr("fill", "#FFD700");
+                
+            // Add ROI indicator with enhanced visibility
+            // Create a highlight area for the turning point
+            svg.append("rect")
+                .attr("x", x("2026") + x.bandwidth()/2 - 40)
+                .attr("y", yProfit(0) - 30)
+                .attr("width", 80)
+                .attr("height", 60)
+                .attr("fill", "rgba(232, 165, 165, 0.1)")
+                .attr("rx", 5)
+                .attr("ry", 5);
+                
+            // Add the vertical line for turning point
+            svg.append("line")
+                .attr("x1", x("2026") + x.bandwidth()/2)
+                .attr("y1", yProfit(0))
+                .attr("x2", x("2026") + x.bandwidth()/2)
+                .attr("y2", yProfit(-800000))
+                .attr("stroke", "#E8A5A5")
+                .attr("stroke-width", 2.5)
+                .attr("stroke-dasharray", "5,5");
+                
+            // Add more visible turning point text
+            svg.append("text")
+                .attr("class", "turning-point-label")
+                .attr("x", x("2026") + x.bandwidth()/2)
+                .attr("y", yProfit(-800000) - 10)
+                .attr("text-anchor", "middle")
+                .attr("fill", "#E8A5A5")
+                .style("font-size", "14px")
+                .style("font-weight", "bold")
+                .text("Punkt zwrotu");
+                
+            // Add a highlight circle at the turning point
+            svg.append("circle")
+                .attr("cx", x("2026") + x.bandwidth()/2)
+                .attr("cy", yProfit(0))
+                .attr("r", 7)
+                .attr("fill", "rgba(232, 165, 165, 0.7)")
+                .attr("stroke", "#E8A5A5")
+                .attr("stroke-width", 2);
+        });
+    </script>
+</body></html>

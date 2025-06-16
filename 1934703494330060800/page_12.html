@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Niezbędna inwestycja</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 819px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 819px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .cost-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #FFD700;
+            transition: all 0.3s ease;
+        }
+        .cost-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .timeline-bar {
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            
+        }
+        .timeline-segment {
+            height: 100%;
+            border-radius: 6px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-6">
+<h1 class="title text-4xl mb-3">Niezbędna inwestycja</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-6">
+<p class="text-xl text-gray-300">
+                Całkowity budżet potrzebny do realizacji projektu DressCode wynosi <span class="font-semibold text-white">1 652 200 PLN</span>. 
+                Środki te zostaną przeznaczone na rozwój MVP, marketing oraz koszty operacyjne w pierwszym roku działalności.
+            </p>
+</div>
+<!-- Main content with chart -->
+<div class="z-10 grid grid-cols-2 gap-10">
+<!-- Left side: Chart -->
+<div>
+<div class="w-full h-64" id="chart"></div>
+<!-- Legend -->
+<div class="mt-4 grid grid-cols-2 gap-2">
+<div class="legend-item">
+<div class="legend-color" style="background-color: #FFD700"></div>
+<span>Rozwój MVP: 740 000 PLN</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #E8A5A5"></div>
+<span>Marketing: 352 000 PLN</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #5DADE2"></div>
+<span>Koszty operacyjne: 410 000 PLN</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #58D68D"></div>
+<span>Rezerwa: 150 200 PLN</span>
+</div>
+</div>
+<!-- Timeline -->
+<div class="mt-8">
+<h3 class="font-semibold text-lg mb-3">Harmonogram wydatków:</h3>
+<div class="timeline-bar">
+<div class="timeline-segment" style="width: 58%; background-color: #FFD700; float: left;"></div>
+<div class="timeline-segment" style="width: 42%; background-color: #5DADE2; float: left;"></div>
+</div>
+<div class="flex justify-between mt-2 text-sm">
+<span>2025: 956 200 PLN (58%)</span>
+<span>2026: 696 000 PLN (42%)</span>
+</div>
+</div>
+</div>
+<!-- Right side: Detailed breakdown -->
+<div class="flex flex-col space-y-4">
+<!-- MVP Development -->
+<div class="cost-card p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-laptop-code text-yellow-400 mr-3"></i>
+<h3 class="font-semibold text-lg">Rozwój MVP: 740 000 PLN</h3>
+</div>
+<ul class="text-gray-300 pl-8 list-disc">
+<li>Rozwój oprogramowania: 636 000 PLN</li>
+<li>Infrastruktura i hosting: 104 000 PLN</li>
+</ul>
+</div>
+<!-- Marketing -->
+<div class="cost-card p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-bullhorn text-yellow-400 mr-3"></i>
+<h3 class="font-semibold text-lg">Marketing: 352 000 PLN</h3>
+</div>
+<ul class="text-gray-300 pl-8 list-disc">
+<li>Kampanie cyfrowe: 210 000 PLN</li>
+<li>Marketing influencerów: 85 000 PLN</li>
+<li>Strona internetowa: 27 000 PLN</li>
+<li>Eventy i promocja offline: 40 000 PLN</li>
+</ul>
+</div>
+<!-- Operational costs -->
+<div class="cost-card p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-cogs text-yellow-400 mr-3"></i>
+<h3 class="font-semibold text-lg">Koszty operacyjne: 410 000 PLN</h3>
+</div>
+<ul class="text-gray-300 pl-8 list-disc">
+<li>Biuro i administracja: 126 000 PLN</li>
+<li>Zespół operacyjny: 240 000 PLN</li>
+<li>Wsparcie użytkownika: 44 000 PLN</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            12/15
+        </div>
+</div>
+<script>
+        // D3.js code for pie chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = [
+                { name: "Rozwój MVP", value: 740000, color: "#FFD700" },
+                { name: "Marketing", value: 352000, color: "#E8A5A5" },
+                { name: "Koszty operacyjne", value: 410000, color: "#5DADE2" },
+                { name: "Rezerwa", value: 150200, color: "#58D68D" }
+            ];
+            
+            const width = 360;
+            const height = 250;
+            const radius = Math.min(width, height) / 2;
+            
+            const svg = d3.select("#chart")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", `translate(${width / 2}, ${height / 2})`);
+            
+            const pie = d3.pie()
+                .value(d => d.value)
+                .sort(null);
+            
+            const arc = d3.arc()
+                .innerRadius(radius * 0.4)  // Donut chart
+                .outerRadius(radius * 0.8);
+            
+            const outerArc = d3.arc()
+                .innerRadius(radius * 0.9)
+                .outerRadius(radius * 0.9);
+            
+            // Create pie chart segments
+            const path = svg.selectAll("path")
+                .data(pie(data))
+                .join("path")
+                .attr("d", arc)
+                .attr("fill", d => d.data.color)
+                .attr("stroke", "#1A2B3C")
+                .style("stroke-width", "2px")
+                .style("opacity", 0.8)
+                .on("mouseover", function() {
+                    d3.select(this)
+                        .style("opacity", 1)
+                        .attr("transform", "scale(1.03)");
+                })
+                .on("mouseout", function() {
+                    d3.select(this)
+                        .style("opacity", 0.8)
+                        .attr("transform", "scale(1)");
+                });
+                
+            // Add total in the center
+            svg.append("text")
+                .attr("text-anchor", "middle")
+                .attr("dy", "-0.5em")
+                .style("font-size", "16px")
+                .style("font-weight", "600")
+                .style("fill", "white")
+                .text("Całkowity budżet:");
+                
+            svg.append("text")
+                .attr("text-anchor", "middle")
+                .attr("dy", "1em")
+                .style("font-size", "18px")
+                .style("font-weight", "700")
+                .style("fill", "#FFD700")
+                .text("1 652 200 PLN");
+        });
+    </script>
+
+</body></html>

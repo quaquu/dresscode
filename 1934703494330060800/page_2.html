@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Problem: Paradoks nowoczesnej garderoby</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {width: 1344px; height: 784px; font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 784px;
+            position: relative;
+            background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 100%);
+            color: white;
+            
+        }
+        .overlay-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+            background-size: 30px 30px;
+        }
+        .title {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            background: linear-gradient(90deg, #FFD700, #E8A5A5);
+            height: 3px;
+            width: 80px;
+            border-radius: 2px;
+        }
+        .problem-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #FFD700;
+            transition: all 0.3s ease;
+        }
+        .problem-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .icon-circle {
+            background: rgba(255, 215, 0, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="slide flex flex-col p-16">
+<div class="overlay-pattern"></div>
+<!-- Header section -->
+<div class="z-10 mb-8">
+<h1 class="title text-4xl mb-3">Problem: Paradoks nowoczesnej garderoby</h1>
+<div class="accent-line"></div>
+</div>
+<!-- Introduction -->
+<div class="z-10 mb-8">
+<p class="text-xl text-gray-300">
+                Współczesny użytkownik, mimo posiadania dużej liczby ubrań, często staje przed problemem: <span class="font-semibold text-white">&#34;Nie mam się w co ubrać&#34;</span>. To paradoks, który wynika nie z braku zasobów, ale z ich nieuporządkowania i braku inspiracji.
+            </p>
+</div>
+<!-- Problem cards -->
+<div class="z-10 grid grid-cols-2 gap-6 mt-4">
+<!-- Problem 1 -->
+<div class="problem-card p-5 rounded-lg flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-tshirt text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-2">Zapomniane ubrania</h3>
+<p class="text-gray-300">Ubrania zalegają w szafie, są zapomniane lub trudno je skomponować w sensowną stylizację.</p>
+</div>
+</div>
+<!-- Problem 2 -->
+<div class="problem-card p-5 rounded-lg flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-shopping-cart text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-2">Nieprzemyślane zakupy</h3>
+<p class="text-gray-300">Kupujemy impulsywnie, nie zastanawiając się, czy nowy produkt będzie pasował do naszej garderoby.</p>
+</div>
+</div>
+<!-- Problem 3 -->
+<div class="problem-card p-5 rounded-lg flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-times-circle text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-2">Porzucone koszyki zakupowe</h3>
+<p class="text-gray-300">Rynek e-commerce zmaga się z rosnącym wskaźnikiem porzucania koszyków - użytkownicy nie są pewni, czy produkt będzie pasował do ich stylu.</p>
+</div>
+</div>
+<!-- Problem 4 -->
+<div class="problem-card p-5 rounded-lg flex items-start">
+<div class="icon-circle mr-5 flex-shrink-0">
+<i class="fas fa-recycle text-yellow-400 text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold text-lg mb-2">Koszty finansowe i ekologiczne</h3>
+<p class="text-gray-300">Skutkiem nietrafionych decyzji zakupowych są zmarnowane pieniądze, zbędne zwroty i rosnące koszty ekologiczne.</p>
+</div>
+</div>
+</div>
+<!-- Bottom quote -->
+<div class="z-10 mt-auto pt-6">
+<p class="text-lg italic text-gray-300 border-l-4 border-yellow-400 pl-4">
+                &#34;Aplikacja ma nie dopuszczać do sytuacji, w której użytkownik kupi ubranie, ale nie będzie wiedział z czym je nosić.&#34;
+            </p>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-5 right-8 text-sm text-gray-400">
+            2/15
+        </div>
+</div>
+
+</body></html>
